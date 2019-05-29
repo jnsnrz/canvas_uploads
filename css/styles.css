@@ -1,0 +1,14 @@
+.container {
+    width: 100%;
+    max-width: 1920px;
+}
+
+.row {
+    margin: 25px 10px;
+}
+
+canvas {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: auto;
+}

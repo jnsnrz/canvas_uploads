@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Images to canvas</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <fieldset>
+                <legend>Upload your photos:</legend>
+                <label for="file">Choose first file to upload</label>
+                <input type="file" accept="image/*" class="file-input">
+
+                <label for="file">Choose second file to upload</label>
+                <input type="file" accept="image/*" class="file-input">
+            </fieldset>
+        </div>
+        <div class="row">
+            <canvas id="uploads"></canvas>
+        </div>
+    </div>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
