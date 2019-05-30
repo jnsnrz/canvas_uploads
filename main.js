@@ -11,19 +11,27 @@ window.addEventListener("DOMContentLoaded", function() {
 
         imgObj.src = "img/" + img;
 
+
         //canvas.width = canvas.height * (canvas.clientWidth / canvas.clientHeight);
 
         let x = 0;
         let y = 0;
 
         imgObj.onload = function () {
-            context.drawImage(imgObj, x, y);
+
+            // console.log(imgObj.naturalWidth);
+            // console.log(imgObj.naturalHeight);
+            context.drawImage(imgObj, x, y, imgObj.naturalWidth, imgObj.naturalHeight);
+
         }
     }
 
 
     function handleUploads(e) {
         let newFile = e.target.files[0].name;
+
+
+        //console.log(e.target.files[0]);
 
         makeArrImages(e.target, newFile);
     
@@ -42,13 +50,17 @@ window.addEventListener("DOMContentLoaded", function() {
                 break;     
         }
 
-        drawImg(files);
+        for(let file of files) {
+            drawImg(file);
+        }
+
+       
 
     }
 
     // Events bindings
 
-    document.addEventListener("change", handleUploads, false);
+    document.addEventListener("input", handleUploads, false);
 
 });
 
